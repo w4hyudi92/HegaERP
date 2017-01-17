@@ -1,0 +1,28 @@
+<resources>
+    <string name="app">Hega</string>
+    <string name="app_name">HEGA</string>
+
+    <string name="login">Log in</string>
+    <string name="login1">Log in with</string>
+    <string name="lo">Log in Owner</string>
+    <string name="ls">Log in Staff</string>
+    <string name="fpass">To recover your password enter your email address used on registration</string>
+
+    <string name="next">NEXT</string>
+    <string name="forgot">Forget your password ?</string>
+
+    <string name="register">Register a new account</string>
+
+    <string name="skip">SKIP</string>
+    <string name="start">LOGIN</string>
+
+    <string name="title">Title</string>
+    <string name="lorem">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</string>
+    <string name="title_activity_welcome">Home Screen</string>
+
+    <string name="edt2">Email Address</string>
+    <string name="edt3">Password</string>
+
+    <!-- Error -->
+    <string name="error_login">Email dan Password Harus di isi!</string>
+</resources>

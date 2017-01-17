@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/log_bg"
+    tools:context="co.hega.hegaerp.ui.Register">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/footer">
+
+        <TextView
+            android:text="Log in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13dp"
+            android:id="@+id/textView18"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:onClick="loginText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="HEGA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:id="@+id/textView13"
+            android:textSize="50sp"
+            android:textColor="#fff"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="normal|bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textView13"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:layout_width="75dp"
+                android:background="#fff"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="65dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="3dp"
+                android:layout_height="0.5dp">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="75dp"
+                android:layout_height="0.5dp"
+                android:background="#fff"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="3dp">
+
+            </RelativeLayout>
+
+            <TextView
+                android:text="Registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textView15"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:layout_marginTop="3dp"
+                android:textStyle="normal|bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="280dp">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:background="#60f7f7f7"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/editText9"
+                android:layout_marginTop="40dp"
+                android:hint="Name"
+                android:textAlignment="center"
+                android:textColorHint="#fff"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:background="#60f7f7f7"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText7"
+                android:layout_below="@+id/editText8"
+                android:layout_alignLeft="@+id/editText8"
+                android:layout_alignStart="@+id/editText8"
+                android:hint="Password"
+                android:textAlignment="center"
+                android:textColorHint="#fff"
+                android:layout_marginTop="10dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:background="#60f7f7f7"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText8"
+                android:layout_below="@+id/editText9"
+                android:layout_alignLeft="@+id/editText9"
+                android:layout_alignStart="@+id/editText9"
+                android:hint="Email"
+                android:textAlignment="center"
+                android:textColorHint="#fff"
+                android:layout_marginTop="10dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:background="#60f7f7f7"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText4"
+                android:hint="Re-enter Password"
+                android:textAlignment="center"
+                android:textColorHint="#fff"
+                android:layout_below="@+id/editText7"
+                android:layout_alignLeft="@+id/editText7"
+                android:layout_alignStart="@+id/editText7"
+                android:layout_marginTop="10dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+            <Button
+                android:text="Register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button4"
+                android:layout_below="@+id/editText4"
+                android:layout_alignLeft="@+id/editText4"
+                android:layout_alignStart="@+id/editText4"
+                android:layout_alignRight="@+id/editText4"
+                android:layout_alignEnd="@+id/editText4"
+                android:layout_marginTop="12dp"
+                android:textAllCaps="false"
+                android:background="#16a085"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#fff"
+            android:layout_marginRight="67dp"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="55dp"
+            android:layout_width="70dp">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="#fff"
+            android:layout_marginRight="67dp"
+            android:layout_marginEnd="67dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="55dp"
+            android:layout_width="70dp"
+            android:layout_height="1dp">
+
+        </RelativeLayout>
+
+        <TextView
+            android:text="Register with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_marginTop="45dp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_below="@+id/textView4"
+            android:layout_toLeftOf="@+id/textView3"
+            android:layout_toStartOf="@+id/textView3"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/circle_button_gplus"
+            android:drawableTop="@drawable/gplus1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingTop="8dp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:background="@drawable/fb"
+            android:layout_alignTop="@+id/button6"
+            android:layout_toRightOf="@+id/textView3"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_staff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/log_bg"
+    tools:context="co.hega.hegaerp.ui.Staff">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/activity_login_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/footer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Forget you password ?"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:paddingTop="15dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView12"
+        android:layout_marginTop="10dp"
+        android:onClick="forget">
+
+        <TextView
+            android:text="@string/ls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView22"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:id="@+id/view"
+            android:background="#ffffff"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/textView22"
+            android:layout_toStartOf="@+id/textView22"
+            android:layout_marginTop="10dp"
+            android:layout_height="1dp" />
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:id="@+id/view2"
+            android:background="#ffffff"
+            android:layout_alignTop="@+id/view"
+            android:layout_toRightOf="@+id/textView22"
+            android:layout_toEndOf="@+id/textView22"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
+            android:layout_height="1dp" />
+
+        <EditText
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:layout_marginTop="40dp"
+            android:id="@+id/company"
+            android:hint="Company Name"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:background="#60f7f7f7"
+            android:layout_width="250dp"
+            android:password="false"
+            android:layout_below="@+id/textView30"
+            android:layout_alignRight="@+id/view2"
+            android:layout_alignEnd="@+id/view2"
+            android:layout_alignLeft="@+id/view"
+            android:layout_alignStart="@+id/view"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_height="50dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/emailUser"
+            android:hint="@string/edt2"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:background="#60f7f7f7"
+            android:layout_width="250dp"
+            android:password="false"
+            android:layout_below="@+id/company"
+            android:layout_alignLeft="@+id/company"
+            android:layout_alignStart="@+id/company"
+            android:layout_alignRight="@+id/company"
+            android:layout_alignEnd="@+id/company"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:text="Log in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/but_login_user"
+            android:textColor="#ffffff"
+            android:background="#16a085"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:onClick="go2"
+            android:layout_below="@+id/passUser"
+            android:layout_alignLeft="@+id/passUser"
+            android:layout_alignStart="@+id/passUser"
+            android:layout_alignRight="@+id/passUser"
+            android:layout_alignEnd="@+id/passUser"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_height="50dp"
+            android:ems="10"
+            android:id="@+id/passUser"
+            android:hint="Password"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:background="#60f7f7f7"
+            android:layout_width="250dp"
+            android:password="false"
+            android:inputType="textPassword"
+            android:layout_below="@+id/emailUser"
+            android:layout_alignRight="@+id/emailUser"
+            android:layout_alignEnd="@+id/emailUser"
+            android:layout_alignLeft="@+id/emailUser"
+            android:layout_alignStart="@+id/emailUser"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:text="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:id="@+id/textView12"
+        android:textSize="50sp"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
