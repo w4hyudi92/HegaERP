@@ -11,9 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:screenOrientation="portrait"
+            android:name=".Splash"
             android:configChanges="orientation|keyboardHidden"
-            android:name=".Splash">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,45 +21,47 @@
             </intent-filter>
         </activity>
         <activity
-            android:screenOrientation="portrait"
+            android:name=".ui.Welcome"
             android:configChanges="orientation|keyboardHidden"
-            android:name=".ui.Welcome" />
+            android:screenOrientation="portrait" />
         <activity
-            android:label=""
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"
-            android:name=".ui.Login" />
-        <activity
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"
-            android:name=".ui.Register" />
-        <activity
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"
-            android:name=".ui.Akses" />
-        <activity
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"
-            android:name=".ui.Forget" />
-        <activity
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"
-            android:name=".ui.Main" />
-        <activity
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"
-            android:name=".ui.LostPass" />
-        <activity
-            android:screenOrientation="portrait"
+            android:name=".ui.Login"
             android:configChanges="orientation|keyboardHidden"
             android:label=""
-            android:name=".ui.Staff"/>
-        <!--activity
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Register"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Akses"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Forget"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Main"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LostPass"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Staff"
+            android:configChanges="orientation|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <!--
+            activity
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:label=""
-            android:name=".ui.Intro"/-->
+            android:name=".ui.Intro"/
+        -->
+        <activity android:name=".Main_User"></activity>
     </application>
-
 
 </manifest>

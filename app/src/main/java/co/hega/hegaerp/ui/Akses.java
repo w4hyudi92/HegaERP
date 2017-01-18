@@ -64,7 +64,7 @@ public class Akses extends AppCompatActivity {
         finish();
     }
 
-    public void onBackPressed() {
+    /*public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Exit this app ?")
                 .setCancelable(false)
@@ -81,6 +81,6 @@ public class Akses extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
 
-    }
+    }*/
 
 }

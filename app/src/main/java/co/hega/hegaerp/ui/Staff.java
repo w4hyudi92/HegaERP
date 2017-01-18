@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import co.hega.hegaerp.Main_User;
 import co.hega.hegaerp.R;
 
 public class Staff extends AppCompatActivity {
@@ -18,6 +19,7 @@ public class Staff extends AppCompatActivity {
     private TextView t, t1, t2;
     private Button button1;
     private EditText cmpny, emUser, psUser;
+    String et_cmpny, et_user, e_passwd;
 
     Typeface textfont;
 
@@ -37,6 +39,18 @@ public class Staff extends AppCompatActivity {
         emUser = (EditText) findViewById(R.id.emailUser);
         psUser = (EditText) findViewById(R.id.passUser);
         button1 = (Button) findViewById(R.id.but_login_user);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //new MasukAja().execute();
+                Intent intent = new Intent(Staff.this, Main_User.class);
+                intent.putExtra("company", cmpny.getText().toString());
+                intent.putExtra("user", emUser.getText().toString());
+                intent.putExtra("pass", psUser.getText().toString());
+                startActivity(intent);
+                finish();
+            }
+        });
 
         textfont = Typeface.createFromAsset(getAssets(), "HelveticaNeue.ttf");
         t.setTypeface(textfont);
@@ -67,15 +81,6 @@ public class Staff extends AppCompatActivity {
                     }
                 }
         );
-    }
-
-    public void go2(View view)
-    {
-        Intent intent = new Intent(this, Main.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_from_right,
-                R.anim.slide_from_left);
-        finish();
     }
 
     public void forget(View view)

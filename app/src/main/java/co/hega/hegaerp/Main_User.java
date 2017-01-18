@@ -1,66 +1,59 @@
-package co.hega.hegaerp.ui;
+package co.hega.hegaerp;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebViewDatabase;
 
-import co.hega.hegaerp.R;
+import co.hega.hegaerp.ui.Login;
+import co.hega.hegaerp.ui.Main;
+import co.hega.hegaerp.ui.Staff;
 
-public class Main extends AppCompatActivity {
+public class Main_User extends AppCompatActivity {
 
-    private WebView view;
-    private String URL = "http://hega.pro/web/signin1234?login=";
-    private String URLPass = "&password=";
+    private WebView viewWeb;
 
-    ProgressDialog prDialog;
-
-    //private  UserSession userSession;
-
+    ProgressDialog prgsDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main__user);
 
         Intent intent = getIntent();
+        String et_cmpny = intent.getStringExtra("company");
+        String et_usr = intent.getStringExtra("user");
+        String et_passwd = intent.getStringExtra("pass");
 
-        String username = intent.getStringExtra("usr");
-        //String password = intent.getStringExtra("psw");
-
-        view = (WebView) this.findViewById(R.id.webview);
-        view.getSettings().setJavaScriptEnabled(true);
-        view.getSettings().setSupportZoom(false);
-        view.getSettings().setBuiltInZoomControls(false);
-        view.getSettings().setLoadsImagesAutomatically(true);
-        view.getSettings().setLoadWithOverviewMode(true);
-        view.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-        view.setWebViewClient(new MyBrowser());
-        view.clearCache(true);
+        viewWeb = (WebView) this.findViewById(R.id.webview2);
+        viewWeb.getSettings().setJavaScriptEnabled(true);
+        viewWeb.getSettings().setSupportZoom(false);
+        viewWeb.getSettings().setBuiltInZoomControls(false);
+        viewWeb.getSettings().setLoadsImagesAutomatically(true);
+        viewWeb.getSettings().setLoadWithOverviewMode(true);
+        viewWeb.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        viewWeb.setWebViewClient(new Main_User.MyBrowse_user());
+        viewWeb.clearCache(true);
         WebViewDatabase.getInstance(this).clearHttpAuthUsernamePassword();
         //view.loadUrl(URL + username + URLPass + "YGpZWgNpaIFtGmlAmy86kiB535ItPNzr");
-        view.loadUrl("http://hega.pro/web/signin1234?login=admin&password=YGpZWgNpaIFtGmlAmy86kiB535ItPNzr");
+        viewWeb.loadUrl("http://" + et_cmpny + ".hega.pro/web/login?login=" + et_usr +"&password=" + et_passwd);
     }
 
-    private class MyBrowser extends WebViewClient {
+    private class MyBrowse_user extends WebViewClient {
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             Uri uri = Uri.parse(url);
             view.loadUrl(url);
 
-            if(uri.getPath().contains("/web/login") || uri.getPath().startsWith("/web/session/logout")){
-                Intent intent = new Intent(Main.this, Login.class);
+            if (uri.getPath().contains("/web/login") || uri.getPath().startsWith("/web/session/logout")) {
+                Intent intent = new Intent(Main_User.this, Staff.class);
                 startActivity(intent);
                 //finish();
                 return true;
@@ -70,17 +63,17 @@ public class Main extends AppCompatActivity {
 
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);
-            prDialog = new ProgressDialog(Main.this);
-            prDialog.setCancelable(false);
-            prDialog.setMessage("Loading, Please wait ...");
-            prDialog.show();
+            prgsDialog = new ProgressDialog(Main_User.this);
+            prgsDialog.setCancelable(false);
+            prgsDialog.setMessage("Loading, Please wait ...");
+            prgsDialog.show();
         }
 
         @Override
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
-            if(prDialog!=null){
-                prDialog.dismiss();
+            if (prgsDialog != null) {
+                prgsDialog.dismiss();
             }
         }
 
@@ -89,8 +82,8 @@ public class Main extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(view.canGoBack())
-            view.goBack();
+        if (viewWeb.canGoBack())
+            viewWeb.goBack();
         else
             super.onBackPressed();
         /*AlertDialog.Builder builder = new AlertDialog.Builder(this);
