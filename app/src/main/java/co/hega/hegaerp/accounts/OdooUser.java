@@ -1,4 +1,4 @@
-/*package co.hega.hegaerp.pref;
+package co.hega.hegaerp.accounts;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -7,18 +7,17 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.os.Parcelable.Creator;
-import co.hega.hegaerp.pref.UserSession;
+import co.hega.hegaerp.core.utils.UserSession;
 import java.util.Locale;
 
-public class HegaUser implements Parcelable {
-    public static final Creator<HegaUser> CREATOR = new Creator<HegaUser>() {
-        public HegaUser createFromParcel(Parcel in) {
-            return new HegaUser(in);
+public class OdooUser implements Parcelable {
+    public static final Creator<OdooUser> CREATOR = new Creator<OdooUser>() {
+        public OdooUser createFromParcel(Parcel in) {
+            return new OdooUser(in);
         }
 
-        public HegaUser[] newArray(int size) {
-            return new HegaUser[size];
+        public OdooUser[] newArray(int size) {
+            return new OdooUser[size];
         }
     };
     public Account account;
@@ -33,7 +32,7 @@ public class HegaUser implements Parcelable {
     public String session_id;
     public String username;
 
-    protected HegaUser(Parcel in) {
+    protected OdooUser(Parcel in) {
         this.id = in.readInt();
         this.host = in.readString();
         this.avatar = in.readString();
@@ -56,8 +55,8 @@ public class HegaUser implements Parcelable {
         return String.format(Locale.getDefault(), "%s[%s:%s%s]", new Object[]{username, uri.getHost(), port, database});
     }
 
-    public HegaUser fromBundle(AccountManager manager, Account account) {
-        HegaUser user = new HegaUser();
+    public OdooUser fromBundle(AccountManager manager, Account account) {
+        OdooUser user = new OdooUser();
         user.id = Integer.parseInt(manager.getUserData(account, "uid"));
         user.avatar = manager.getUserData(account, "avatar");
         user.name = manager.getUserData(account, "name");
@@ -109,5 +108,4 @@ public class HegaUser implements Parcelable {
     public UserSession getSession(Context context) {
         return new UserSession(context, this);
     }
-}*/
-
+}

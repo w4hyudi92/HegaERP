@@ -12,11 +12,6 @@ import android.widget.TextView;
 import com.mobsandgeeks.saripaar.annotation.Email;
 import com.mobsandgeeks.saripaar.annotation.NotEmpty;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import co.hega.hegaerp.R;
-
 public class Register extends AppCompatActivity {//implements View.OnClickListener{
 
     TextView txtview, txtview1, txtview2, txtview3, txtview4;

@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import co.hega.hegaerp.R;
-
 /**
  * Created by nuryantowahyudi on 1/10/17.
  */

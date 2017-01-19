@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import co.hega.hegaerp.R;
-
 public class LostPass extends AppCompatActivity {
 
     TextView tView1, tView2, tView3;

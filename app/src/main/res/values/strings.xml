@@ -25,4 +25,11 @@
 
     <!-- Error -->
     <string name="error_login">Email dan Password Harus di isi!</string>
+    <string name="error_password_required">Password Required</string>
+    <string name="error_server_url_required">Server URL required</string>
+    <string name="error_username_required">Username required</string>
+    <string name="text_choose_an_account">Choose an account</string>
+    <string name="add_new_account">Add Account</string>
+    <string name="wait">Loading, Please wait..</string>
+    <string name="account_label">Hega</string>
 </resources>

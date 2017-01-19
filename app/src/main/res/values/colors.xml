@@ -28,4 +28,8 @@
         <item>@color/dot_dark_screen3</item>
         <item>@color/dot_dark_screen4</item>
     </array>
+
+    <color name="colorPrimaryDarkOptional">#875b7c</color>
+    <color name="colorPrimaryDarkOptionalDark">#5b3250</color>
+    <color name="teal">#00827f</color>
 </resources>

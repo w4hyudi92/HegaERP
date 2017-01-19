@@ -1,16 +1,16 @@
-/*package co.hega.hegaerp.pref;
+package co.hega.hegaerp.core.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.webkit.CookieManager;
-
+import co.hega.hegaerp.accounts.OdooUser;
 
 public class UserSession {
-
-    private HegaUser hegaUser;
+    private OdooUser odooUser;
     private SharedPreferences preferences;
 
     public UserSession(Context context, OdooUser user) {
@@ -19,7 +19,7 @@ public class UserSession {
     }
 
     public void removeSession() {
-        SharedPreferences.Editor editor = this.preferences.edit();
+        Editor editor = this.preferences.edit();
         editor.remove(key("host_name"));
         editor.remove(key("session_id"));
         editor.apply();
@@ -30,7 +30,7 @@ public class UserSession {
     }
 
     public void registerSession(String session_id) {
-        SharedPreferences.Editor editor = this.preferences.edit();
+        Editor editor = this.preferences.edit();
         editor.putString(key("host_name"), this.odooUser.host);
         editor.putString(key("session_id"), session_id);
         editor.apply();
@@ -45,10 +45,10 @@ public class UserSession {
     }
 
     public void injectSession() {
-        Log.d("Host:", this.HegaUser.host);
-        Log.d("User: ", this.HegaUser.name);
-        Log.d("DB: ", this.HegaUser.database);
+        Log.d("Host:", this.odooUser.host);
+        Log.d("User: ", this.odooUser.name);
+        Log.d("DB: ", this.odooUser.database);
         Log.d("Injecting session:", getSessionId() + " to host :" + this.odooUser.host);
         CookieManager.getInstance().setCookie(this.odooUser.host, "session_id=" + getSessionId());
     }
-}*/
+}

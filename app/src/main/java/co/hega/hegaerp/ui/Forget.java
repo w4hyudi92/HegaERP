@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import co.hega.hegaerp.R;
-
 public class Forget extends AppCompatActivity {
 
     TextView Viewtext, Viewtext1, Viewtext2;

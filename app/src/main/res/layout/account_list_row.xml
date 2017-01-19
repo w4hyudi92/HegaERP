@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/accountAvatar"
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:src="@drawable/ic_user" />
+    <LinearLayout 
+        android:gravity="top|bottom|center_vertical|fill_vertical|center|fill" 
+        android:orientation="vertical" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1.0">
+        <TextView
+            android:textColor="#414141" 
+            android:id="@+id/accountName"
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="4dp"
+            android:singleLine="true" />
+        <TextView
+            android:id="@+id/accountHost"
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:singleLine="true" />
+    </LinearLayout>
+    <ImageView 
+        android:id="@+id/removeAccount"
+        android:padding="8dp"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:src="@drawable/ic_trash" 
+        android:tint="#414141" />
+</LinearLayout>
